@@ -26,15 +26,17 @@ var deferred = require('deferred-method');
 var nsq = require('nsq.js');
 
 var writer = nsq.writer();
-deferred(writer, 'publish', writer.once.bind(writer, 'ready'));
+deferred(writer, 'publish');
 
+writer.publish('topic', 'message');
+writer.publish('topic', 'message');
 writer.publish('topic', 'message');
 ```
 
-  Since emitting a `"ready"` event is most common, `deferred-method` listens to it if you don't specify anything, so you can simply do:
+  Since emitting a `"ready"` event is most common, `deferred-method` listens to it by default, unless don't specify your own `ready` function:
 
 ```js
-deferred(writer, 'publish');
+deferred(writer, 'publish', writer.once.bind(writer, 'ready'));
 ```
 
 ## Installation
