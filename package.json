@@ -1,0 +1,13 @@
+{
+  "name": "deferred-method",
+  "version": "0.0.0",
+  "description": "Queue method invocations until something is ready",
+  "scripts": {
+    "test": "make test"
+  },
+  "repository": "juliangruber/deferred-method",
+  "devDependencies": {
+    "tape": "^4.0.0"
+  },
+  "license": "MIT"
+}
