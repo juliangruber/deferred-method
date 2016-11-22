@@ -7,7 +7,7 @@
   },
   "repository": "juliangruber/deferred-method",
   "devDependencies": {
-    "tape": "^4.0.0"
+    "tape": "^4.6.3"
   },
   "license": "MIT"
 }
